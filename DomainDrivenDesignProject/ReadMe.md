@@ -23,6 +23,7 @@ cart1.add(item1)
 
 cart2.add(item2)
 
+
 cart1.equals(cart2)  should be false*
 
 Problem#7  Add Price to a Product . We need support for only one currency, say - USD.
