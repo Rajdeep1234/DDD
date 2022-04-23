@@ -1,6 +1,6 @@
 package com.ddd.bank.domain;
 
-public class Address {
+public final class Address {
 
     private String city;
 
