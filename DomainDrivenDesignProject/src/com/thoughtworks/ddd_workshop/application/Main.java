@@ -7,7 +7,7 @@ import com.thoughtworks.ddd_workshop.domain.Cart;
 import com.thoughtworks.ddd_workshop.domain.Item;
 import com.thoughtworks.ddd_workshop.domain.Price;
 import com.thoughtworks.ddd_workshop.domain.Product;
-import com.thoughtworks.ddd_workshop.service.PriceService;
+import com.thoughtworks.ddd_workshop.domainservice.PriceService;
 
 public class Main {
 

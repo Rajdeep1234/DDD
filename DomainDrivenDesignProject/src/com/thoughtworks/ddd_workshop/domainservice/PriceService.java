@@ -1,4 +1,4 @@
-package com.thoughtworks.ddd_workshop.service;
+package com.thoughtworks.ddd_workshop.domainservice;
 
 import java.util.HashMap;
 import java.util.Map;
