@@ -7,6 +7,7 @@ import com.thoughtworks.ddd_workshop.domain.Cart;
 import com.thoughtworks.ddd_workshop.domain.Item;
 import com.thoughtworks.ddd_workshop.domain.Price;
 import com.thoughtworks.ddd_workshop.domain.Product;
+import com.thoughtworks.ddd_workshop.service.PriceService;
 
 public class Main {
 
@@ -14,14 +15,15 @@ public class Main {
 		
 		Cart cart=new Cart();
 		
+		PriceService priceService=new PriceService();
 		
-		Product ipadPro=new Product("Ipad Pro",new Price(100.00,Currency.getInstance("INR")));
+		Product ipadPro=new Product("Ipad Pro",new Price(priceService.getAdjustedProductPrice("Ipad Pro"),Currency.getInstance("INR")));
 		  Item ipadProItem=new Item(ipadPro);
 		
-		Product heroInkPen=new Product("Hero Ink pen",new Price(200.00,Currency.getInstance("INR")));
+		Product heroInkPen=new Product("Hero Ink pen",new Price(priceService.getAdjustedProductPrice("Hero Ink pen"),Currency.getInstance("INR")));
 		Item heroInkPenItem=new Item(heroInkPen);
 		
-		Product gmCricketBat=new Product("GM Cricket bat",new Price(300.00,Currency.getInstance("INR")));
+		Product gmCricketBat=new Product("GM Cricket bat",new Price(priceService.getAdjustedProductPrice("GM Cricket bat"),Currency.getInstance("INR")));
 		Item gmCricketBatItem=new Item(gmCricketBat,2);
 		
 		

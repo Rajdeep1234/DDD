@@ -9,15 +9,13 @@ public class Price {
 	public double getPrice() {
 		return price;
 	}
-	public void setPrice(double price) {
-		this.price = price;
-	}
+	
+	
 	public Currency getCur() {
 		return cur;
 	}
-	public void setCur(Currency cur) {
-		this.cur = cur;
-	}
+	
+	
 	public Price(double price, Currency cur) {
 		super();
 		this.price = price;

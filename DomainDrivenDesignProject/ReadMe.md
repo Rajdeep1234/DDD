@@ -33,4 +33,7 @@ Note –
  For modelling currency - Please use java.util.Currency (Currency.getInstance("USD"))  or what your programming language provides, if none just use String for now.
  new Product("Apple Pencil", new Price(...));
  
- 
+ Problem #8 - As a Business User I would like price my product 10% below competitor price (competitor price is available for product) .
+Assume that HashMap of Competitor Product Name and price is available. Competitor name matches 1 to 1 with our Product Name
+new Product( "name", Price(discountedPrice, "USD")) new Product( "name", Price(10, "USD"))
+
