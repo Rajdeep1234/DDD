@@ -8,14 +8,10 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class CustomerAccountServiceTest {
-
+public class CustomerTest {
 
     @Test
     void shouldUpdateAddteAddress() {
-        CustomerAccountService customerAccountService = new CustomerAccountService();
         Address address = new Address("Chennai");
         List<Account> accounts = List.of(
                 new Account(address),
@@ -25,7 +21,7 @@ class CustomerAccountServiceTest {
 
         Customer customer = new Customer(accounts, address);
         Address newAddress = new Address("Kolkata");
-        customerAccountService.updateAddress(customer, newAddress);
+        customer.updateAddress(customer, newAddress);
         Assertions.assertThat(customer.getCustomerAddress().getCity()).isEqualTo(newAddress.getCity());
         Assertions.assertThat(customer.getAccounts().get(1).getAddress().getCity()).isEqualTo(newAddress.getCity());
 

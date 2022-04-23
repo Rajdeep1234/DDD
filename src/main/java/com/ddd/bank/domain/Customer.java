@@ -27,6 +27,10 @@ public class Customer {
         return customerAddress;
     }
 
-
+    public void updateAddress(Customer customer, Address address) {
+        customer.setCustomerAddress(address);
+        customer.getAccounts()
+                .forEach(account -> account.setAddress(address));
+    }
 
 }
