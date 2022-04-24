@@ -14,8 +14,8 @@ class CartTest {
 
         String ipadProName = "ipadPro";
         String heroPenName = "heroPen";
-        Item ipad = new Item(new Product(ipadProName, new Price(priceCalculatorService.getAdjustPrice(ipadProName))));
-        Item heroPen = new Item(new Product(heroPenName, new Price(priceCalculatorService.getAdjustPrice(heroPenName))));
+        Item ipad = new Item(new Product(ipadProName, new Price(priceCalculatorService.getAdjustPrice(ipadProName)), 2d ));
+        Item heroPen = new Item(new Product(heroPenName, new Price(priceCalculatorService.getAdjustPrice(heroPenName)), 3d));
         cart1.addItem(ipad);
         cart1.addItem(heroPen);
         Cart cart2 = new Cart();
@@ -28,6 +28,8 @@ class CartTest {
         Order order = new Order();
         order.chekout(cart1);
         Assertions.assertThat(cart1.isCheckedOut()).isTrue();
+
+        Assertions.assertThat(order.getTotalCost()).isEqualTo(540.0d);
 
     }
 }

@@ -15,4 +15,8 @@ public final class Price {
         this.amount = amount;
         this.currency = DEFAULT_CURRENCY;
     }
+
+    public Double getAmount() {
+        return amount;
+    }
 }
